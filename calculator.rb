@@ -28,8 +28,6 @@ def usage
   TEXT
 end
 
-operation_name, left_raw, right_raw = ARGV
-
 if ARGV.include?("--help") || ARGV.include?("-h")
   puts usage
   exit 0
@@ -39,6 +37,8 @@ unless ARGV.length == 3
   warn usage
   exit 1
 end
+
+operation_name, left_raw, right_raw = ARGV
 
 operation = OPERATIONS[operation_name]
 
